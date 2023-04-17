@@ -21,6 +21,12 @@ jobs:
       
       - name: start minikube
         id: minikube
-        uses: medyagh/setup-minikube@master
+        uses: medyagh/setup-minikube@latest
         with:
           addons: ingress
+          
+      - name: Install kubectl
+        uses: azure/setup-kubectl@v3
+        with:
+           version: latest
+        id: install
