@@ -17,7 +17,7 @@ jobs:
       steps:
         #
         - name: Start minikube
-          run: sudo minikube start # -n 2 # --nodes 2
+          run: sudo -S ubuntu\n minikube start # -n 2 # --nodes 2
 
         - name: Enable ingress addon
           run: minikube addons enable ingress
