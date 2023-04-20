@@ -16,17 +16,17 @@ jobs:
       # Steps represent a sequence of tasks that will be executed as part of the job
       steps:
         #
-        - name: Ster driver
+        - name: Set driver
           run: minikube config set driver virtualbox
           
         - name: Start minikube
           run: minikube start #--user=minikube # -n 2 # --nodes 2
 
-        - name: Enable ingress addon
-          run: minikube addons enable ingress
+        #- name: Enable ingress addon
+        #  run: minikube addons enable ingress
         
         #- run: minikube ssh --user ubuntu
         #- run: minikube start 
 
-        - name: Check minikube status
-          run: minikube status
+        #- name: Check minikube status
+        #  run: minikube status
