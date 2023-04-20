@@ -19,8 +19,8 @@ jobs:
         - name: Start minikube
           run: minikube start #--user=minikube # -n 2 # --nodes 2
 
-        #- name: Enable ingress addon
-        #  run: minikube addons enable ingress
+        - name: Enable ingress addon
+          run: minikube addons enable ingress
         
         #- run: minikube ssh --user ubuntu
         #- run: minikube start 
