@@ -21,6 +21,9 @@ jobs:
           
         - name: Start minikube
           run: minikube start #--user=minikube # -n 2 # --nodes 2
+          
+        - run: kubectl get nodes
+        - run: kubectl get pods -A
 
         #- name: Enable ingress addon
         #  run: minikube addons enable ingress
