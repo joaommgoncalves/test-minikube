@@ -16,6 +16,9 @@ jobs:
       # Steps represent a sequence of tasks that will be executed as part of the job
       steps:
         #
+        - name: Ster driver
+          run: minikube config set driver virtualbox
+          
         - name: Start minikube
           run: minikube start #--user=minikube # -n 2 # --nodes 2
 
