@@ -20,7 +20,7 @@ jobs:
           run: minikube config set driver virtualbox
           
         - name: Start minikube
-          run: minikube start #--user=minikube # -n 2 # --nodes 2
+          run: RUNNER_TRACKING_ID="" && (minikube start) #--user=minikube # -n 2 # --nodes 2
           
         - run: kubectl get nodes
         - run: kubectl get pods -A
