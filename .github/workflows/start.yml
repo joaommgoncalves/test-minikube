@@ -16,20 +16,18 @@ jobs:
       # Steps represent a sequence of tasks that will be executed as part of the job
       steps:
         #
-        - name: Set driver
+        - name: Set VirtualBox as driver
           run: minikube config set driver virtualbox
           
         - name: Start minikube
           run: RUNNER_TRACKING_ID="" && (minikube start) #--user=minikube # -n 2 # --nodes 2
-          
-        - run: kubectl get nodes
-        - run: kubectl get pods -A
 
-        #- name: Enable ingress addon
-        #  run: minikube addons enable ingress
+        - name: Enable ingress addon
+          run: minikube addons enable ingress 
+
+        - name: Check minikube status
+          run: minikube status
         
-        #- run: minikube ssh --user ubuntu
-        #- run: minikube start 
-
-        #- name: Check minikube status
-        #  run: minikube status
+        #For debuggin
+        #- run: kubectl get nodes
+        #- run: kubectl get pods -A
